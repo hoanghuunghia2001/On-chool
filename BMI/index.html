@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+        <!-- Option for providing height
+            and weight to the user-->
+        <p>Height (in cm)</p>
+
+        <input type="number" id="height">
+
+        <p>Weight (in kg)</p>
+
+        <input type="number" id="weight">
+
+        <button id="btn">Calculate</button>
+
+        <div id="result"></div>
+        <div class="infor1"></div>
+        <div class="infor2"></div>
+    </div>
+
+</body>
+    <!-- Include JS files -->
+    <script >
+        var height =document.querySelector('input#height');
+        var weight =document.querySelector('input#weight');
+        var btn =document.querySelector('button#btn');
+        console.log(height);
+        console.log(weight);
+        console.log(btn);
+        var infor1 =document.querySelector('.infor1');
+        var infor2 =document.querySelector('.infor2');
+        console.log(infor1);
+
+        var weight1 = 0;
+        var height1= 0;
+        var bmi = 0;
+
+
+        btn.addEventListener("click", function(e){
+            var height2 =height1/100;
+            bmi = weight1 /(height2*height2);
+            if (bmi<18.5){
+                infor1.innerHTML ="phân loại: Gầy"
+                infor2.innerHTML ="Nguy cơ phát triển bệnh: Thấp"
+            }
+            if (18.5<bmi<24.9){
+                infor1.innerHTML ="phân loại: Bình thường"
+                infor2.innerHTML ="Nguy cơ phát triển bệnh: Trung bình"
+            }
+            if (29.9>bmi>25){
+                infor1.innerHTML ="phân loại: Hơi béo"
+                infor2.innerHTML ="Nguy cơ phát triển bệnh: Cao"
+            }
+            if (34.9>bmi>30){
+                infor1.innerHTML ="phân loại: béo phì cấp độ 1"
+                infor1.innerHTML ="Nguy cơ phát triển bệnh: cao"
+            }
+            if (34.9>bmi>30){
+                infor1.innerHTML ="phân loại: béo phì cấp độ 1"
+                infor2.innerHTML ="Nguy cơ phát triển bệnh: cao"
+            }
+            if (bmi>40){
+                infor1.innerHTML ="phân loại: béo phì cấp độ 3"
+                infor2.innerHTML ="Nguy cơ phát triển bệnh: nguy hiểm"
+            }
+            console.log(bmi);
+            console.log(weight1);
+            console.log(height1);
+        })
+        weight.addEventListener("change", function(e){
+            weight1= e.target.value;
+            console.log(weight1);
+        })
+        height.addEventListener("change", function(e){
+            height1 = e.target.value;
+            console.log(height1);
+        })
+        
+    </script>
+
+</html>

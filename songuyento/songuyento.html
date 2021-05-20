@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>songuyento</title>
+    <link rel="stylesheet" href="songuyento.css">
+</head>
+<body>
+    <div class="tieude">
+        <h1>KIỂM TRA SỐ NGUYÊN TỐ</h1>
+    </div>
+    
+  
+    <div class="content">
+        <label for="">Nhập số cần kiểm tra:</label>
+        <br>
+        <input type="number" id="number">
+        
+        <!-- <button id="btn">Kiểm tra</button> -->
+        <div class="infor" id="infor"></div>
+    </div>
+
+    
+    <script>
+       
+        // var btn = document.querySelector('.content button#btn')
+        // console.log(btn);
+        var infor = document.querySelector('.content .infor')
+        // console.log(infor);
+        var input = document.querySelector('.content input#number')
+        // console.log(input);
+        
+        var inputnumber = 0
+        input.addEventListener('keyup',(e)=>{
+            inputnumber = +e.target.value;
+            console.log(inputnumber);
+
+            e.preventDefault();
+    var isPrime = render(inputnumber);
+    if(isPrime){
+        infor.innerHTML = inputnumber + " là số nguyên tố";
+    } else {
+        infor.innerHTML = inputnumber + " không phải là số nguyên tố ";
+    }
+        })
+        
+        var number = inputnumber;
+      function render(number){
+            var flag = false;
+           
+            if(number <= 1){
+               
+                return flag = false    
+            }
+            else{
+                var count = 0;
+                for (let i = 2; i < Math.sqrt(number); i++) {
+                    
+                    if(number % i === 0){
+                        count ++;
+                    }
+                    
+                }
+                
+                    if(count >= 1){
+                        
+                        return flag = false
+                        console.log(flag);
+                    }
+                    
+                    else{
+                       
+                        return flag = true
+                        console.log(flag);
+                    }
+                }
+            }
+        
+        
+        // btn.addEventListener('click', (e)=>{
+      
+        // })
+     
+    </script>
+</body>
+</html>

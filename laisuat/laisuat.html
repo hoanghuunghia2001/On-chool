@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laisuat</title>
+    <link rel="stylesheet" href="laisuat.css">
+</head>
+<body>
+    <div class="container">
+      <div class="container__box">
+        <div class="container__box-n">
+          <label for="">số Tiền vay:</label>
+        </div>
+        <div class="container__box-n">
+          <input id="sotienvay" type="number">
+        </div>
+        <div class="container__box-n">
+          <Label>VND</Label>
+        </div>
+      </div>
+      <div class="container__box">
+        <div class="container__box-n">
+          <label for="">Thời gian vay:</label>
+        </div>
+        <div class="container__box-n">
+          <input id="thoigianvay" type="number">
+        </div>
+        <div class="container__box-n">
+          <Label>Tháng</Label>
+        </div>
+      </div>
+      <div class="container__box">
+        <div class="container__box-n">
+          <label for="">Lãi suất:</label>
+        </div>
+        <div class="container__box-n">
+          <input id="laisuat" type="number">
+        </div>
+        <div class="container__box-n">
+          <Label>%</Label>
+        </div>
+      </div>
+      <div class="container__box">
+        <div class="container__box-n">
+          <label for="">Ngày giải ngân:</label>
+        </div>
+        <div class="container__box-n">
+          <input id="ngaygiaingan" type="date">
+        </div>
+        <div class="container__box-n">
+          
+        </div>
+      </div>
+      <Button id="btn">Tính</Button>
+      </div>
+      
+      </div>
+      <div class="container__infor " id="container__infor">
+        <table id="table" border="1px">
+
+        <tr >
+          <th  colspan="2">Kỳ Trả nợ</th> 
+          <th>Số gốc còn lại</th>          
+          <th>Gốc</th>         
+          <th>Lãi</th>
+          <th>Tổng gốc + lãi</th>
+        </tr>
+        </table>
+        
+    </div>
+    <Script src="laisuat.js"></Script>
+</body>
+</html>

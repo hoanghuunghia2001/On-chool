@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="number" id="input">
+<button id="btn">click</button>
+<body>
+    <script>
+        var input = document.querySelector('input#input')
+        console.log(input);
+
+        
+        var a = input
+        console.log(a);
+        var tong = 0
+        
+        btn.addEventListener('click', ()=>{
+
+            for (var i = 0; i< a; i++) {
+                var b = a
+                console.log(b);
+
+                for (var y = 1; y < a; y++) {
+                 if(b % y == 0 ){
+                     tong = tong + y
+                 }
+                 
+
+                 
+             }
+             console.log( tong + "  tongla");
+             if (tong == b){
+                 console.log(b + "  la so hoan hao ");
+             }
+             else{
+                 console.log(b + "  khong phai la so hoan hao");
+             }
+
+            }
+
+        })
+       
+        
+        
+
+    </script>
+</body>
+</html>
