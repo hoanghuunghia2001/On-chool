@@ -1,0 +1,39 @@
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: burlywood;
+}
+.show{
+    height: 100vh - 5px;
+    width: 100%;
+    /* background-color: aqua; */
+}
+.show .student{
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+    margin-top: 10px;
+}
+p{
+    float: left;
+}
+.button{
+    height: 100%;
+    width: 5%;
+    background-color: blueviolet;
+}
+button{
+    cursor: pointer;
+    float: left;
+}
+th {
+    width: 300px;
+    height: 30px;
+}
+.btn{
+    width: 100%;
+    height: 50px;
+}
+.btn:hover{
+    background-color: cadetblue;
+}
