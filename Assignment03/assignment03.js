@@ -1,6 +1,7 @@
 var show = document.querySelector('.show');
 var btn1 = document.querySelector('.btn1');
 var btn2 = document.querySelector('.btn2');
+var btn3 = document.querySelector('.btn3');
 console.log(btn2);
 // console.log(show);
 class students {
@@ -53,7 +54,7 @@ function aDanhSach(arr){
             <td>${std.monhoc[1].hoa}</td>
         </tr>
         `).join('');
-        document.querySelector('#table').innerHTML += html;
+        document.querySelector('.tbody').innerHTML = html;
         
 }
 // aDanhSach(danhsach);
@@ -61,7 +62,6 @@ btn1.addEventListener('click',(e)=>{
     danhsach = [...DanhSach];
     aDanhSach(DanhSach);
 })
-// 2. SẮP XẾP DANH SÁCH THEO THỨ TỰ TỪ BÉ ĐẾN LỚN
 function sapXepDanhSachTuBeDenLon (arr){
     
     function compareMarkASC( a, b ) {
@@ -80,6 +80,28 @@ function sapXepDanhSachTuBeDenLon (arr){
 btn2.addEventListener('click',function(){
     
     sapXepDanhSachTuBeDenLon(danhsach);
+    console.log(danhsach);
+    // aDanhSach(danhsach)
 });
-
+function sapXepDanhSachTuLonDenBe (arr){
+    
+    function xapxeplonbe( a, b ) {
+        if ( a.diemtrungbinh < b.diemtrungbinh ){
+          return 1;
+        }
+        if ( a.diemtrungbinh > b.diemtrungbinh ){
+          return -1;
+        }
+        return 0;
+      }
+    var danhsachlonbe = arr.sort(xapxeplonbe);
+    console.log(danhsachlonbe);
+    aDanhSach(danhsachlonbe);
+}
+btn3.addEventListener('click',function(){
+    
+    sapXepDanhSachTuLonDenBe(danhsach);
+    console.log(danhsach);
+    // aDanhSach(danhsach)
+});
 
